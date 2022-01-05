@@ -1,0 +1,19 @@
+{
+  "name": "elodieagoutin_3_03012022",
+  "version": "1.0.0",
+  "description": "\"projet3\"",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notsearch1/elodieagoutin_3_03012022.git"
+  },
+  "author": "elodie agoutin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/notsearch1/elodieagoutin_3_03012022/issues"
+  },
+  "homepage": "https://github.com/notsearch1/elodieagoutin_3_03012022#readme"
+}
