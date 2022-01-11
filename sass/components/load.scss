@@ -1,0 +1,55 @@
+// animation page d'accueil masquée pendant le chargementdu site
+
+.page{
+    animation: Page 0s 2s forwards;
+    opacity: 0;
+        @keyframes Page {
+            to   { opacity:1; }
+        }
+}
+
+
+// animation load visible pendant le chargement du site
+.load-page{
+    animation: Load 0s 2s forwards;
+    opacity:1;
+    width:150px;
+    height:150px;
+    margin:0 auto;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-75px;
+    margin-top:-75px;
+        @keyframes Load {
+        to   { opacity:0; }
+        }
+}
+
+
+// load spinner
+.load-page-spinner{
+    position:relative;
+        img{
+            position: absolute;
+            top:25px;
+            left:25px;
+            height: 100px;
+            width: 100px;
+        }
+        &__circle{
+            border: 2px solid transparent; 
+            border-top: 8px solid $color-primary; 
+            border-left: 8px solid $color-secondary; 
+            border-right: 8px solid $color-tertiary; 
+            border-bottom: 8px solid $color-bg; 
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            animation: spin infinite linear .9s;
+        }
+            @keyframes spin {
+                0% { transform: rotate(180deg); }
+                100% { transform: rotate(360deg); }
+            } 
+}

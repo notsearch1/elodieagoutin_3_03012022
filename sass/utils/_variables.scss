@@ -1,7 +1,23 @@
+
+// couleurs du site
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
 $color-bg:#f2f2f2;
 
+// font
 $heading-font: 'Shrikhand', cursive;
 $text-font:'Roboto', sans-serif;
+
+// breakpoints
+$small:767px;
+$medium:992px;
+$large:1250px;
+
+// media queries
+$mobil:"(max-width:#{$small})";
+$desktop:"(min-width:#{$medium})";
+$tablette:"(min-width:#{$small}) and (max-width:#{$medium})";
+$smarTab:"(min-width:#{$medium})";
+$deskTab:"(min-width:#{$small})";
+

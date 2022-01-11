@@ -1,7 +1,21 @@
 @mixin titre{
     font-size: 27px;
-    margin: 0.67em 0;
+    margin-bottom: 10px;
     font-weight: bold;
+}
+@mixin btn($width:50%) {
+    max-width: 300px;
+    width: $width;
+    padding:10px;
+    border-radius: 20px;
+    color:#fff;
+    border:none;
+    background: linear-gradient($color-secondary, $color-primary);
+    box-shadow: 2px 2px 10px #b9b9b9 ;
+}
+@mixin btnHover{
+        background: linear-gradient(lighten($color-secondary, 5), lighten($color-primary, 5));
+        box-shadow: 2px 2px 8px #807e7e;
 }
 
 @mixin shadow{

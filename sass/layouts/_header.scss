@@ -1,11 +1,26 @@
+
+// header de l'ensemble des pages
 #header-page{
-    margin:20px 0;
+    background-color: #fff;
+    margin: 0;
+    padding:20px;
     display: flex;
     justify-content: center;  
     align-items: center;
     position: relative;
+    // flêche de retour
     i{
         position:absolute;
         left: 15px;
+    }
+}
+
+// version tablette et desktop
+@media #{$deskTab}{
+    #header-page{
+        position:fixed;
+        width: 100%;
+        top:0;
+        z-index:5;  
     }
 }
