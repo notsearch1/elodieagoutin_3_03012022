@@ -17,7 +17,9 @@ $large:1250px;
 // media queries
 $mobil:"(max-width:#{$small})";
 $desktop:"(min-width:#{$medium})";
+$desktop-xl:"(min-width:#{$large})";
 $tablette:"(min-width:#{$small}) and (max-width:#{$medium})";
 $smarTab:"(min-width:#{$medium})";
 $deskTab:"(min-width:#{$small})";
+
 
