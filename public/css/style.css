@@ -20,6 +20,11 @@ li {
   list-style: none;
 }
 
+.section-xl {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .page {
   animation: Page 0s 2s forwards;
   opacity: 0;
@@ -78,7 +83,53 @@ li {
   }
 }
 
+.restaurant-card-description__icon, .page-banner__heading__icon {
+  position: relative;
+  z-index: 2;
+}
+.restaurant-card-description__icon .far, .page-banner__heading__icon .far {
+  position: absolute;
+  font-size: 20px;
+  top: 0;
+  right: 0;
+  background-color: #f2f2f2;
+}
+.restaurant-card-description__icon:hover > .fas, .page-banner__heading__icon:hover > .fas {
+  animation: Heart 800ms;
+  animation-fill-mode: forwards;
+  transform-origin: 0 100%;
+}
+@keyframes Heart {
+  0% {
+    transform: scaleY(0.1);
+  }
+  25% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(0.6);
+  }
+  75% {
+    transform: scaleY(0.8);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.restaurant-card-description__icon:hover > .far, .page-banner__heading__icon:hover > .far {
+  display: none;
+}
+.restaurant-card-description__icon .fas, .page-banner__heading__icon .fas {
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 20px;
+  transform: scaleY(0);
+}
+
 #header-page {
+  height: 60px;
   background-color: #fff;
   margin: 0;
   padding: 20px;
@@ -87,9 +138,14 @@ li {
   align-items: center;
   position: relative;
 }
+#header-page h1 {
+  font-family: "Shrikhand", cursive;
+}
 #header-page i {
+  font-size: 20px;
+  bottom: 20px;
   position: absolute;
-  left: 15px;
+  left: 20px;
 }
 
 @media (min-width:767px) {
@@ -405,6 +461,7 @@ li {
 }
 
 .menu-group {
+  width: 100%;
   padding: 0 20px 20px;
 }
 .menu-group__heading {
@@ -422,36 +479,114 @@ li {
   height: 3px;
 }
 .menu-group__items {
-  border-radius: 20px;
-  box-shadow: 2px 2px 10px #bfbfbf;
-  margin: 20px 0;
-  padding: 10px 20px;
+  overflow: hidden;
+  margin: 20px auto;
   display: flex;
-  justify-content: space-between;
+  box-shadow: 2px 2px 10px #bfbfbf;
+  border-radius: 20px;
+  animation: appearance 0.4s ease-in-out;
+  max-width: 500px;
+}
+@keyframes appearance {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .menu-group__items__text {
+  flex: 1;
+  padding: 10px 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 250px;
-  direction: ltr;
 }
 .menu-group__items__text h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .menu-group__items__text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 14px;
-  display: flex;
 }
 .menu-group__items__price {
+  width: 80px;
   display: flex;
+  justify-content: end;
   align-items: end;
   font-weight: bold;
-  margin-left: 10px;
+  padding: 10px 20px;
 }
 .menu-group__items__icon {
-  display: none;
+  transition: 0.6s;
+  margin: 0 -80px 0 20px;
+  width: 60px;
+  display: flex;
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 2px 2px 10px #bfbfbf;
+  justify-content: center;
+  align-items: center;
+}
+.menu-group__items__icon i {
+  font-size: 22px;
+  color: #fff;
+  transform: rotate(180deg);
+  transition-duration: 0.6s;
+}
+.menu-group__items:hover > .menu-group__items__icon {
+  margin: 0;
+  display: flex;
+  transition: 0.6s;
+}
+.menu-group__items:hover > .menu-group__items__icon i {
+  transform: rotate(0);
+}
+
+.item-0 {
+  animation-delay: 0s;
+}
+
+.item-1 {
+  animation-delay: 0.1111111111s;
+}
+
+.item-2 {
+  animation-delay: 0.2222222222s;
+}
+
+.item-3 {
+  animation-delay: 0.3333333333s;
+}
+
+.item-4 {
+  animation-delay: 0.4444444444s;
+}
+
+.item-5 {
+  animation-delay: 0.5555555556s;
+}
+
+.item-6 {
+  animation-delay: 0.6666666667s;
+}
+
+.item-7 {
+  animation-delay: 0.7777777778s;
+}
+
+.item-8 {
+  animation-delay: 0.8888888889s;
+}
+
+.item-9 {
+  animation-delay: 1s;
 }
 
 @media (min-width:767px) {
@@ -461,12 +596,11 @@ li {
 
   .menu-group__items {
     max-width: 750px;
-    margin: 10px auto;
   }
 }
-@media (min-width:1250px) {
+@media (min-width:992px) {
   .page-banner__img {
-    height: 400px;
+    height: 350px;
   }
 
   .menu-section__wrapper {
@@ -478,7 +612,19 @@ li {
     width: 33%;
   }
   .menu-group__items {
-    max-width: 450px;
+    max-width: 650px;
+  }
+}
+@media (min-width:1250px) {
+  .page-banner__heading {
+    justify-content: center;
+  }
+  .page-banner__heading h1 {
+    margin-right: 20px;
+  }
+
+  .page-banner__img {
+    height: 400px;
   }
 }
 

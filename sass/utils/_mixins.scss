@@ -21,3 +21,9 @@
 @mixin shadow{
     box-shadow: 2px 2px 10px darken($color-bg, 20);
 }
+
+@mixin ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

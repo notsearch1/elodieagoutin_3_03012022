@@ -1,6 +1,7 @@
 
 // header de l'ensemble des pages
 #header-page{
+    height: 60px;
     background-color: #fff;
     margin: 0;
     padding:20px;
@@ -8,10 +9,15 @@
     justify-content: center;  
     align-items: center;
     position: relative;
+    h1{
+        font-family: $heading-font;
+    }
     // flêche de retour
     i{
+        font-size: 20px;
+        bottom: 20px;
         position:absolute;
-        left: 15px;
+        left: 20px;
     }
 }
 
