@@ -92,7 +92,7 @@ li {
   font-size: 20px;
   top: 0;
   right: 0;
-  background-color: #f2f2f2;
+  background-color: transparent;
 }
 .restaurant-card-description__icon:hover > .fas, .page-banner__heading__icon:hover > .fas {
   animation: Heart 800ms;
@@ -128,7 +128,7 @@ li {
   transform: scaleY(0);
 }
 
-#header-page {
+.header-page {
   height: 60px;
   background-color: #fff;
   margin: 0;
@@ -137,25 +137,24 @@ li {
   justify-content: center;
   align-items: center;
   position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
 }
-#header-page h1 {
+.header-page__logo {
   font-family: "Shrikhand", cursive;
+  font-size: 27px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
-#header-page i {
+.header-page i {
   font-size: 20px;
   bottom: 20px;
   position: absolute;
   left: 20px;
 }
 
-@media (min-width:767px) {
-  #header-page {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 5;
-  }
-}
 .footer {
   background-color: #3a3939;
   padding: 30px;
@@ -189,6 +188,7 @@ li {
   }
 }
 .search-section {
+  margin-top: 60px;
   background-color: #f2f2f2;
   padding-bottom: 30px;
 }
@@ -257,7 +257,7 @@ li {
   position: relative;
   height: 60px;
   margin: 20px 0;
-  padding: 10px;
+  padding: 10px 15px 10px;
   background-color: #f2f2f2;
   border-radius: 25px;
   box-shadow: 2px 2px 10px #bfbfbf;
@@ -280,7 +280,7 @@ li {
   left: -10px;
 }
 .use-section__content__items i {
-  margin: 0 20px;
+  margin: 0 10px;
   color: #a6a6a6;
 }
 .use-section__content__items:hover i {
@@ -302,6 +302,9 @@ li {
   background-color: #fff;
   margin: 20px 0;
   border-radius: 25px;
+}
+.restaurant-card:hover {
+  transform: scale(1.02);
 }
 .restaurant-card .restaurant-card-images {
   position: relative;
@@ -334,50 +337,6 @@ li {
   font-weight: bold;
   margin-bottom: 5px;
 }
-.restaurant-card-description__icon {
-  position: relative;
-  z-index: 2;
-}
-.restaurant-card-description__icon .far {
-  position: absolute;
-  font-size: 20px;
-  top: 0;
-  right: 0;
-  background-color: #fff;
-}
-.restaurant-card-description__icon:hover > .fas {
-  animation: Heart 800ms;
-  animation-fill-mode: forwards;
-  transform-origin: 0 100%;
-}
-@keyframes Heart {
-  0% {
-    transform: scaleY(0.1);
-  }
-  25% {
-    transform: scaleY(0.3);
-  }
-  50% {
-    transform: scaleY(0.6);
-  }
-  75% {
-    transform: scaleY(0.8);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-.restaurant-card-description__icon:hover > .far {
-  display: none;
-}
-.restaurant-card-description__icon .fas {
-  background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 20px;
-  transform: scaleY(0);
-}
 
 @media (min-width:767px) {
   .btn-container__btn {
@@ -392,10 +351,13 @@ li {
   }
 
   .use-section {
-    text-align: center;
     margin: 0 auto;
     padding: 20px;
     max-width: 1400px;
+  }
+  .use-section__heading {
+    display: flex;
+    justify-content: center;
   }
   .use-section__content {
     display: flex;
@@ -482,17 +444,20 @@ li {
   overflow: hidden;
   margin: 20px auto;
   display: flex;
+  opacity: 0;
   box-shadow: 2px 2px 10px #bfbfbf;
   border-radius: 20px;
-  animation: appearance 0.4s ease-in-out;
+  animation: appearance 0.6s ease-in-out forwards;
   max-width: 500px;
 }
 @keyframes appearance {
   0% {
     transform: translateY(20px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 .menu-group__items__text {
@@ -554,48 +519,48 @@ li {
 }
 
 .item-1 {
-  animation-delay: 0.1111111111s;
-}
-
-.item-2 {
-  animation-delay: 0.2222222222s;
-}
-
-.item-3 {
   animation-delay: 0.3333333333s;
 }
 
-.item-4 {
-  animation-delay: 0.4444444444s;
-}
-
-.item-5 {
-  animation-delay: 0.5555555556s;
-}
-
-.item-6 {
+.item-2 {
   animation-delay: 0.6666666667s;
 }
 
+.item-3 {
+  animation-delay: 1s;
+}
+
+.item-4 {
+  animation-delay: 1.3333333333s;
+}
+
+.item-5 {
+  animation-delay: 1.6666666667s;
+}
+
+.item-6 {
+  animation-delay: 2s;
+}
+
 .item-7 {
-  animation-delay: 0.7777777778s;
+  animation-delay: 2.3333333333s;
 }
 
 .item-8 {
-  animation-delay: 0.8888888889s;
+  animation-delay: 2.6666666667s;
 }
 
 .item-9 {
-  animation-delay: 1s;
+  animation-delay: 3s;
+}
+
+.item-10 {
+  animation-delay: 3.3333333333s;
 }
 
 @media (min-width:767px) {
   .page-banner__img {
     height: 300px;
-  }
-
-  .menu-group__items {
-    max-width: 750px;
   }
 }
 @media (min-width:992px) {

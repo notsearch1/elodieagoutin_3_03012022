@@ -1,6 +1,6 @@
 
 // header de l'ensemble des pages
-#header-page{
+.header-page{
     height: 60px;
     background-color: #fff;
     margin: 0;
@@ -9,24 +9,19 @@
     justify-content: center;  
     align-items: center;
     position: relative;
-    h1{
+    position:fixed;
+        width: 100%;
+        top:0;
+        z-index:5;
+    &__logo{
         font-family: $heading-font;
+        @include titre;
     }
-    // flêche de retour
+    // flêche de retour sur page restaurant
     i{
         font-size: 20px;
         bottom: 20px;
         position:absolute;
         left: 20px;
-    }
-}
-
-// version tablette et desktop
-@media #{$deskTab}{
-    #header-page{
-        position:fixed;
-        width: 100%;
-        top:0;
-        z-index:5;  
     }
 }
