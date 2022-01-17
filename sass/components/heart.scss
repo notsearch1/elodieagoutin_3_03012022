@@ -13,17 +13,17 @@
             }
                 // animation sur coeur plein au passage sur coeur vide
                 &:hover> .fas{
-                animation:Heart 800ms;
-                animation-fill-mode: forwards;
-                transform-origin: 0 100%;  
-                
-                @keyframes Heart { 
-                    0%{transform:scaleY(0.1)}
-                    25%{transform:scaleY(0.3)}
-                    50%{ transform:scaleY(0.6)}
-                    75%{transform:scaleY(0.8)}
-                    100%{transform:scaleY(1)}   
-                    }
+                animation:Heart 800ms forwards;
+    
+                @keyframes Heart {
+                    0%    { opacity: 0; }
+                    20%   { opacity: 0.1; }
+                    30%   { opacity: 0.2; }
+                    40%   { opacity: 0.4; }
+                    50%   { opacity: 0.5; }
+                    80%   { opacity: 0.7; }
+                    100%  { opacity: 1; }
+                  }
                 }
                 // disparition du coeur vide au passage de la souris
                 &:hover> .far{
@@ -36,7 +36,7 @@
                 -webkit-background-clip: text;
                 color:transparent;
                 font-size: 20px;
-                transform: scaleY(0);   
+                opacity: 0; 
             }         
         }
 }
