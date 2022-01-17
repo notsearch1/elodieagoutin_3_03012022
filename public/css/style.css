@@ -95,25 +95,29 @@ li {
   background-color: transparent;
 }
 .restaurant-card-description__icon:hover > .fas, .page-banner__heading__icon:hover > .fas {
-  animation: Heart 800ms;
-  animation-fill-mode: forwards;
-  transform-origin: 0 100%;
+  animation: Heart 800ms forwards;
 }
 @keyframes Heart {
   0% {
-    transform: scaleY(0.1);
+    opacity: 0;
   }
-  25% {
-    transform: scaleY(0.3);
+  20% {
+    opacity: 0.1;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
   }
   50% {
-    transform: scaleY(0.6);
+    opacity: 0.5;
   }
-  75% {
-    transform: scaleY(0.8);
+  80% {
+    opacity: 0.7;
   }
   100% {
-    transform: scaleY(1);
+    opacity: 1;
   }
 }
 .restaurant-card-description__icon:hover > .far, .page-banner__heading__icon:hover > .far {
@@ -125,7 +129,7 @@ li {
   -webkit-background-clip: text;
   color: transparent;
   font-size: 20px;
-  transform: scaleY(0);
+  opacity: 0;
 }
 
 .header-page {
@@ -502,7 +506,6 @@ li {
 .menu-group__items__icon i {
   font-size: 22px;
   color: #fff;
-  transform: rotate(180deg);
   transition-duration: 0.6s;
 }
 .menu-group__items:hover > .menu-group__items__icon {
@@ -511,7 +514,7 @@ li {
   transition: 0.6s;
 }
 .menu-group__items:hover > .menu-group__items__icon i {
-  transform: rotate(0);
+  transform: rotate(360deg);
 }
 
 .item-0 {

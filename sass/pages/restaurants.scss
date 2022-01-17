@@ -114,7 +114,6 @@
                 i {
                     font-size: 22px;
                     color:#fff;
-                    transform: rotate(180deg);
                     transition-duration: 0.6s;
                 }    
         }
@@ -123,7 +122,7 @@
             display: flex;
             transition: .6s;
                 i{
-                    transform: rotate(0); 
+                    transform: rotate(360deg); 
                 }
         }     
     }
